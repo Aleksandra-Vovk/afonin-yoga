@@ -1,0 +1,334 @@
+/* Основные стили для body */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background-color: #fceee9; /* Розовый фон */
+    color: #333; /* Темный текст */
+}
+
+/* Стили для контейнера формы входа */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto 0; /* Отступ сверху 100px для опускания формы ниже */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('fon.webp');
+    background-size: cover; /* Растягивает картинку на весь фон */
+    background-position: center; /* Центрирует картинку */
+    background-repeat: no-repeat; /* Отключает повторение картинки */
+}
+
+/* Стили для заголовка "Вход" */
+.login-container h1 {
+    margin: 0 0 30px 0; /* Отступ снизу 30px */
+    font-size: 32px;
+    color: #586a5a; /* Темно-зеленый */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для формы */
+#login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Отступы между элементами формы */
+}
+
+/* Стили для полей ввода */
+#login-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+/* Стили для кнопки входа */
+#login-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #667b68; /* Темно-зеленый */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#login-form button:hover {
+    background-color: #586a5a; /* Темный зеленый */
+}
+
+/* Стили для сообщения об ошибке */
+#error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+#error-message.hidden {
+    display: none;
+}
+
+/* Остальные стили для страницы "Мои картинки" и других страниц остаются без изменений */
+/* Стили для заголовков h1 */
+h1 {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 32px;
+    color: #586a5a; /* Темно зеленый */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для папки "Асаны" */
+#image-folder {
+    cursor: pointer;
+    border: 2px solid #cbd3c4; /* Светло-зеленый */
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #faf4f2; /* Розовый */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#image-folder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(203,211,196, 0.2);
+}
+
+/* Стили для заголовка папки */
+.folder-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Стили для иконки папки */
+.folder-icon {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+
+/* Стили для текста папки */
+.folder-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #667b68; /* Темно зеленый*/
+    transition: color 0.3s; /* Плавное изменение цвета */
+}
+
+/* Эффект затемнения текста при наведении */
+.folder-text:hover {
+    color: #4a5e4c; /* Темный зеленый */
+}
+
+/* Стили для содержимого папки */
+.folder-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Стили для скрытых элементов */
+.hidden {
+    display: none;
+}
+
+/* Стили для выделенных изображений */
+img.selected {
+    border: 2px solid #667b68; /* Темно-зеленый */
+    border-radius: 8px;
+}
+
+/* Стили для контейнера изображений */
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px;
+    justify-content: center;
+}
+
+/* Стили для кнопок управления папкой */
+.folder-controls {
+    margin-top: 10px;
+}
+
+/* Стили для кнопки "Добавить" */
+#upload-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #667b68; /* темно зеленый */
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#upload-button:hover {
+    background-color: #667b68; /* Темный зеленый */
+    transform: scale(1.05);
+}
+
+/* Стили для кнопки "Удалить" */
+.delete-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#delete-button,
+.delete-in-folder-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #edb9a7; /* Розовый для контраста */
+    color: #667b68;/* темно зеленый контраста */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#delete-button:hover,
+.delete-in-folder-button:hover {
+    background-color: #dea995; /* Темно-розовый */
+    transform: scale(1.05);
+}
+
+#delete-button.hidden {
+    display: none;
+}
+
+/* Стили для кнопки "Создать папку" */
+#create-folder-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #95a997; /* зеленый */
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#create-folder-button:hover {
+    background-color: #7f9281; /* Темный зеленый */
+    transform: scale(1.05);
+}
+
+/* Стили для контейнера пользовательских папок */
+#custom-folders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Стили для новой папки */
+.folder {
+    cursor: pointer;
+    border: 2px solid #cbd3c4; /* Светло-зеленый */
+    padding: 15px;
+    margin: 20px 0;
+    background-color: #faf4f2; /* Розовый */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.folder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(187, 192, 182, 0.2);
+}
+
+/* Стили для заголовка новой папки */
+.folder-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Стили для кнопок внутри новой папки */
+.delete-folder-button,
+.rename-in-folder-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    color: #667b68; /* Яркий фиолетовый */
+    transition: color 0.3s;
+}
+
+.delete-folder-button:hover {
+    color: #edb9a7; /* Розовый для контраста */
+}
+
+.rename-in-folder-button:hover {
+    color: #667b68; /* Бирюзовый для контраста */
+}
+
+/* Стили для контейнера картинок внутри новой папки */
+.image-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Стили для кнопки "Удалить выбранные" внутри новой папки */
+.delete-in-folder-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #edb9a7; /* Розовый */
+    color: #667b68;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.delete-in-folder-button:hover {
+    background-color: #dea995; /* Темно-розовый */
+    transform: scale(1.05);
+}
+
+/* Стили для кнопки "Сохранить" */
+.save-in-folder-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #95a997; /* Бирюзовый */
+    color: white;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.save-in-folder-button:hover {
+    background-color: #7f9281; /* Темно-бирюзовый */
+    transform: scale(1.05);
+}
+
+/* Стили для контейнера кнопок */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
