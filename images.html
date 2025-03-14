@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои картинки</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <i><h1>Йога дом Сергея Афонина</h1></i>  
+    <input type="file" id="file-input" accept="image/*" multiple style="display: none;">
+    
+    <!-- Папка "Асаны" -->
+    <div class="folder" id="image-folder">
+        <div class="folder-header">
+            <img src="woman.png" alt="Иконка папки" class="folder-icon">
+            <span class="folder-text"><b><h3>АСАНЫ</h3></b></span>
+        </div>
+        <div class="folder-content hidden">
+            <div class="image-container" id="image-container">
+                <!-- Картинки будут добавлены сюда -->
+            </div>
+            <!-- Контейнер для кнопки "Удалить" -->
+            <div class="delete-button-container">
+                <button id="delete-button" class="hidden">Удалить</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Кнопка добавления изображений -->
+    <button id="upload-button">Добавить асаны</button>
+
+    <!-- Кнопка создания новой папки -->
+    <button id="create-folder-button">Новая практика</button>
+
+    <!-- Контейнер для пользовательских папок -->
+    <div id="custom-folders-container">
+        <!-- Созданные папки будут добавляться сюда -->
+    </div>
+
+    <script src="images.js"></script>
+</body>
+</html>
